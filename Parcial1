@@ -1,0 +1,43 @@
+public class Persona {
+    String nombre, ocupacion;
+    int edad;
+    
+    public Persona(String nombre, int edad, String ocupacion) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.ocupacion = ocupacion;
+    }
+    
+    public void saludar() {
+        System.out.println("Mi nombre es " + nombre + ".");
+    }
+    
+    public void trabajar() {
+        System.out.println(nombre + " está trabajando como " + ocupacion + ".");
+    }
+    
+    public void envejecer() {
+        edad++;
+        System.out.println(nombre + " ahora tiene " + edad + " años.");
+    }
+}
+
+public class ObjetosDePersona {
+    public static void main(String[] args) {
+        Persona estudiante = new Persona("Jose", 17, "Estudiante");
+        Persona docente = new Persona("Diego", 44, "Docente");
+        Persona administrativo = new Persona("Carlos", 60, "Administrativo");
+        
+        estudiante.saludar();
+        estudiante.trabajar();
+        estudiante.envejecer();
+
+        docente.saludar();
+        docente.trabajar();
+        docente.envejecer();
+
+        administrativo.saludar();
+        administrativo.trabajar();
+        administrativo.envejecer();
+    }
+}
